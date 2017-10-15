@@ -1,11 +1,15 @@
 package br.com.fatecpg.quiz;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 
 public class Quiz {
-    public static double nivelF = .0;
-    public static double soma = .0;
-    public static int contagem = 0;
+    private static double nivelF = .0;
+    private static double soma = .0;
+    private static int contagem = 0;
 
     public static double getNivelFinal() {
         return nivelF;
@@ -23,20 +27,20 @@ public class Quiz {
                 correto++;
             }
         }
-        double nivel = 100 * ((double) correto / (double) pergunta.size());
+        double nivel = 100 * ((double) correto / 10.0);
         contagem++;
         soma += nivel;
         nivelF = nivel;
         return nivel;
     }
 
-    private static ArrayList<Perguntas> pergunta;
+    private static List<Perguntas> pergunta;
 
-    public static ArrayList<Perguntas> getPergunta() {
+    public static List<Perguntas> getPerguntaLista() {
         if (pergunta == null) {
             pergunta = new ArrayList<>();
             Perguntas q1 = new Perguntas(
-                    "\"" + "", "1-De onde é a inverção do chuveiro elétrico? ",
+                    "De onde é a invenção do chuveiro elétrico? ", "Brasil",
                     new String[]{
                         "Brasil",
                         "Inglaterra",
@@ -45,7 +49,7 @@ public class Quiz {
             );
 
             Perguntas q2 = new Perguntas(
-                    "\"" + "", "2-Quais são o menor e maior pais do mundo?",
+                    "Quais são o menor e maior pais do mundo?", "Vaticano e Rússia",
                     new String[]{
                         "Vaticano e Rússia",
                         "Nauru e China",
@@ -54,7 +58,7 @@ public class Quiz {
             );
 
             Perguntas q3 = new Perguntas(
-                    "\"" + "", "3-Qual o livro mais vendido no mundo a seguir á Biblia?",
+                    "Qual o livro mais vendido no mundo a seguir á Biblia?", "Dom Quixote",
                     new String[]{
                         "Dom Quixote",
                         "O senhor dos Aneis",
@@ -63,7 +67,7 @@ public class Quiz {
             );
 
             Perguntas q4 = new Perguntas(
-                    "\"" + "", "4-Quais os paises que têm a maior e a menor expectatica de vida?",
+                    "Quais os paises que têm a maior e a menor expectatica de vida?", "Japão e Serra Leoa",
                     new String[]{
                         "Japão e Serra Leoa",
                         "Australia e Afeganistão",
@@ -72,7 +76,7 @@ public class Quiz {
             );
 
             Perguntas q5 = new Perguntas(
-                    "\"" + "", "5-O que a palavra legend significa em português? ",
+                    "O que a palavra legend significa em português? ", "Lenda",
                     new String[]{
                         "Lenda",
                         "Legenda",
@@ -81,7 +85,7 @@ public class Quiz {
             );
 
             Perguntas q6 = new Perguntas(
-                    "\"" + "", "6-Qual o número mínimo de jogadores numa partida de futebol? ",
+                    "Qual o número mínimo de jogadores numa partida de futebol? ", "7",
                     new String[]{
                         "7",
                         "8",
@@ -90,7 +94,7 @@ public class Quiz {
             );
 
             Perguntas q7 = new Perguntas(
-                    "\"" + "", "7-Quem pintou \"Guernica\"? ",
+                    "Quem pintou \"Guernica\"? ", "Pablo Picasso",
                     new String[]{
                         "Pablo Picasso",
                         "Paul Cézanne",
@@ -99,7 +103,7 @@ public class Quiz {
             );
 
             Perguntas q8 = new Perguntas(
-                    "\"" + "", "8-Quanto tempo a luz do Sol demorar para chegar à Terra?",
+                    "Quanto tempo a luz do Sol demorar para chegar à Terra?", "8 minutos",
                     new String[]{
                         "8 minutos",
                         "1 dia",
@@ -108,7 +112,7 @@ public class Quiz {
             );
 
             Perguntas q9 = new Perguntas(
-                    "\"" + "", "9-Qual a nacionalidade de Che Guevara",
+                    "Qual a nacionalidade de Che Guevara", "Argentina",
                     new String[]{
                         "Argentina",
                         "Peruana",
@@ -117,7 +121,7 @@ public class Quiz {
             );
 
             Perguntas q10 = new Perguntas(
-                    "\"" + "", "10-Qual a altura da rede de volei nos jogos masculino e feminino? ",
+                    "Qual a altura da rede de volei nos jogos masculino e feminino? ", "2,4m a 2,24m",
                     new String[]{
                         "2,4m a 2,24m",
                         "2,4 para ambos",
@@ -125,7 +129,7 @@ public class Quiz {
                     }
             );
             Perguntas q11= new Perguntas(
-                    "\"" + "", "11-Em que periodo da pré-historia o fogo foi descorberto? ",
+                    "Em que periodo da pré-historia o fogo foi descorberto? ", "Paleolitico",
                     new String[]{
                         "Paleolitico",
                         "Neolitico",
@@ -133,7 +137,7 @@ public class Quiz {
                     }
             );
             Perguntas q12 = new Perguntas(
-                    "\"" + "", "12-Qual a montanha masi alta do Brasil? ",
+                    "Qual a montanha masi alta do Brasil? ", "Pico da Neblina",
                     new String[]{
                         "Pico da Neblina",
                         "Pico Paraná",
@@ -141,7 +145,7 @@ public class Quiz {
                     }
             );
             Perguntas q13 = new Perguntas(
-                    "\"" + "", "13-Em qual local da Ásia o português e lingua oficial? ",
+                    "Em qual local da Ásia o português e lingua oficial? ", "Macau",
                     new String[]{
                         "Macau",
                         "India",
@@ -149,7 +153,7 @@ public class Quiz {
                     }
             );
             Perguntas q14 = new Perguntas(
-                    "\"" + "", "14-Qual destes países é transcontinental? ",
+                    "Qual destes países é transcontinental? ", "Rússia",
                     new String[]{
                         "Rússia",
                         "Istamblur",
@@ -157,7 +161,7 @@ public class Quiz {
                     }
             );
             Perguntas q15 = new Perguntas(
-                    "\"" + "", "15-Nome que se dá a uma porção de terra cercada de água por todos os lados? ",
+                    "Nome que se dá a uma porção de terra cercada de água por todos os lados? ", "Ilha",
                     new String[]{
                         "Lagoa",
                         "Ilha",
@@ -165,7 +169,7 @@ public class Quiz {
                     }
             );
             Perguntas q16 = new Perguntas(
-                    "\"" + "", "16-Cidade Brasileira onde esta o rio Tietê? ",
+                    "Cidade Brasileira onde esta o rio Tietê? ", "São Paulo",
                     new String[]{
                         "São Paulo",
                         "Rio de Janeiro",
@@ -190,6 +194,32 @@ public class Quiz {
             pergunta.add(q15);
             pergunta.add(q16);
         }
+        Collections.shuffle(pergunta);
+        
         return pergunta;
+    }
+    
+    public static double getNivelF() {
+        return nivelF;
+    }
+
+    public static void setNivelF(double aNivelF) {
+        nivelF = aNivelF;
+    }
+
+    public static double getSoma() {
+        return soma;
+    }
+
+    public static void setSoma(double aSoma) {
+        soma = aSoma;
+    }
+
+    public static int getContagem() {
+        return contagem;
+    }
+
+    public static void setContagem(int aContagem) {
+        contagem = aContagem;
     }
 }

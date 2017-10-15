@@ -4,6 +4,7 @@
     Author     : ravan
 --%>
 
+<%@page import="br.com.fatecpg.quiz.Quiz"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,5 +14,17 @@
     </head>
     <body>
         <h1>Projeto 004</h1>
+        <hr>
+        <h3>Quiz - Conhecimentos gerais</h3>
+        <h3><center>Tabela com últimos 10 testes realizados</center></h3>
+        <table border ="1">
+            <tr>
+                <%  Quiz q = new Quiz();
+                    for (int i = 1; i <= q.getContagem(); i++){                        
+                %>
+                <td></td>
+            </tr>
+        </table>
+        
     </body>
 </html>

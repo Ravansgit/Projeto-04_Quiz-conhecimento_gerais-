@@ -4,6 +4,7 @@
     Author     : ravan
 --%>
 
+<%@page import="java.util.Random"%>
 <%@page import="br.com.fatecpg.quiz.Quiz"%>
 <%@page import="br.com.fatecpg.quiz.Perguntas"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -19,14 +20,19 @@
         <h3>Questões:</h3>
         
         <form>
-            <%for (Perguntas q: Quiz.getPergunta()){%>
-            <h4><%= q.getPergunta() %></h4>
+            <%int i = 1;%>
+            <%for (Perguntas q: Quiz.getPerguntaLista()){%>
+            <%if (i <= 10){%>
+            <%String teste = i + "-";%>
+            <h4><%= teste + q.getPergunta() %></h4>
             <input type="radio" name="<%= q.getPergunta() %>" value="<%= q.getAlternativas()[0] %>" />
             <%= q.getAlternativas()[0] %>
             <input type="radio" name="<%= q.getPergunta() %>" value="<%= q.getAlternativas()[1] %>" />
             <%= q.getAlternativas()[1] %>
             <input type="radio" name="<%= q.getPergunta() %>" value="<%= q.getAlternativas()[2] %>" />
-            <%= q.getAlternativas()[2] %>            
+            <%= q.getAlternativas()[2] %> 
+            <%i = i + 1;%>
+            <%}%>
             <%}%>
             <br/><br/>
             <input type="submit" name="finalizar" value="Finalizar"/>

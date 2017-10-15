@@ -3,7 +3,8 @@ package br.com.fatecpg.quiz;
 public class Perguntas {
     private String pergunta;
     private String resposta;
-    private String alternativas[];
+    private String alternativas[];    
+   
 
     public Perguntas(String pergunta, String resposta, String[] alternativas) {
         this.pergunta = pergunta;
