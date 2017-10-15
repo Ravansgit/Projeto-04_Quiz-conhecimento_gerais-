@@ -15,9 +15,9 @@
     <body>
         
         <%
-           if (session == null)
+           if (session.getAttribute("teste") == null)
            {%>
-                <h3>Deseja logar?</h3>
+            <h4><a href="login.jsp">Autenticar-se!</a></h4>
            <%}else
            {
             String nome = session.getAttribute("teste").toString();
@@ -43,14 +43,14 @@
         <h1>Projeto 004</h1>
         <hr>
         <h3>Quiz - Conhecimentos gerais</h3>
+        <h4><a href="questionario.jsp">Realizar teste</a></h4>
         <h3>Testes realizados: <%= Quiz.contagem %></h3>
         <h3>Média: <%= Quiz.getMedia() %> </h3>
         <h3><center>Tabela com últimos 10 testes realizados</center></h3>
         <table border ="1">
             
-        </table>
+        </table>        
         
-        <h4><a href="login.jsp">Autenticar-se!</a></h4>
         
     </body>
 </html>
