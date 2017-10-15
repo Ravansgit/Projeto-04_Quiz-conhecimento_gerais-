@@ -1,37 +1,15 @@
 package br.com.fatecpg.quiz;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 public class Quiz {
-    private static double nivelF = .0;
-    private static double soma = .0;
-    private static int contagem = 0;
-
-    public static double getNivelFinal() {
-        return nivelF;
-    }
+    public static double soma = 0;
+    public static int contagem = 0;
 
     public static double getMedia() {
         return soma / (double) contagem;
-    }
-
-    public static double Validacao(String[] responde) {
-        int correto = 0;
-        for (int i = 0; i < pergunta.size(); i++) {
-            Perguntas q = pergunta.get(i);
-            if (q.getResposta().equals(responde[i])) {
-                correto++;
-            }
-        }
-        double nivel = 100 * ((double) correto / 10.0);
-        contagem++;
-        soma += nivel;
-        nivelF = nivel;
-        return nivel;
     }
 
     private static List<Perguntas> pergunta;
@@ -198,28 +176,5 @@ public class Quiz {
         
         return pergunta;
     }
-    
-    public static double getNivelF() {
-        return nivelF;
-    }
-
-    public static void setNivelF(double aNivelF) {
-        nivelF = aNivelF;
-    }
-
-    public static double getSoma() {
-        return soma;
-    }
-
-    public static void setSoma(double aSoma) {
-        soma = aSoma;
-    }
-
-    public static int getContagem() {
-        return contagem;
-    }
-
-    public static void setContagem(int aContagem) {
-        contagem = aContagem;
-    }
+   
 }

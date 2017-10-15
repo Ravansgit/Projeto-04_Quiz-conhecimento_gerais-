@@ -13,18 +13,44 @@
         <title>Home - Web_Quiz</title>
     </head>
     <body>
+        
+        <%
+           if (session == null)
+           {%>
+                <h3>Deseja logar?</h3>
+           <%}else
+           {
+            String nome = session.getAttribute("teste").toString();
+           
+        %>
+        
+        <h3>Olá, <%= nome %></h3>
+        
+        <form>
+            <input type="submit" name="btnSair" value="Sair"/>
+        </form>  
+        
+        <%}
+            if (request.getParameter("btnSair") != null)
+            {
+                
+                session.invalidate();
+                response.sendRedirect("home.jsp");
+                
+            }
+            %>
+            
         <h1>Projeto 004</h1>
         <hr>
         <h3>Quiz - Conhecimentos gerais</h3>
+        <h3>Testes realizados: <%= Quiz.contagem %></h3>
+        <h3>Média: <%= Quiz.getMedia() %> </h3>
         <h3><center>Tabela com últimos 10 testes realizados</center></h3>
         <table border ="1">
-            <tr>
-                <%  Quiz q = new Quiz();
-                    for (int i = 1; i <= q.getContagem(); i++){                        
-                %>
-                <td></td>
-            </tr>
+            
         </table>
+        
+        <h4><a href="login.jsp">Autenticar-se!</a></h4>
         
     </body>
 </html>

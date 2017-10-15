@@ -19,6 +19,41 @@
         <h2>Quiz</h2>
         <h3>Questões:</h3>
         
+        <%
+            try
+            {
+                if (request.getParameter("finalizar") != null)
+                {
+                    int acertos = 0;
+                    for (Perguntas q: Quiz.getPerguntaLista())
+                    {
+                        String respostaUser = request.getParameter(q.getPergunta());
+                        
+                        if (respostaUser != null)
+                        {
+                            if (respostaUser.equals(q.getResposta()))
+                            {
+                                acertos++;
+                            }
+                        }
+                    }
+                    
+                    Quiz.contagem++;
+                    Quiz.soma += (100.00 * ((double)acertos/10.0));
+                    response.sendRedirect(request.getContextPath()+"/home.jsp");
+                    
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                
+            }
+        
+        
+        
+        %>
+        
         <form>
             <%int i = 1;%>
             <%for (Perguntas q: Quiz.getPerguntaLista()){%>
