@@ -13,6 +13,15 @@ import java.util.ArrayList;
  */
 public class Usuario {
     private String nome;
+    private double nota;
+
+    public double getNota() {
+        return nota;
+    }
+
+    public void setNota(double nota) {
+        this.nota = nota;
+    }
     
     private static ArrayList<Usuario> user;
     
@@ -24,6 +33,18 @@ public class Usuario {
         }
         
         return user;
+    }
+    
+    private static ArrayList<Usuario> notaUser;
+    
+    public static ArrayList<Usuario> getNotaUser()
+    {
+        if (notaUser == null)
+        {
+            notaUser = new ArrayList<>();
+        }
+        
+        return notaUser;
     }
 
     public String getNome() {

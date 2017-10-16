@@ -35,6 +35,7 @@
                    sessão.setAttribute("teste", nome);
                    Usuario user = new Usuario();
                    user.setNome(nome);
+                   Usuario.getUsuario().add(user);
                    response.sendRedirect("home.jsp");
                }
             }
