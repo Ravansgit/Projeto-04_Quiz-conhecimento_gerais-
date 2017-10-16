@@ -55,15 +55,7 @@
               </div>
            </nav> 
         
-        <%}
-            if (request.getParameter("btnSair") != null)
-            {
-                
-                session.invalidate();
-                response.sendRedirect("home.jsp");
-                
-            }
-            %>
+        
             
         <center>
         <h3>Quiz - Conhecimentos gerais</h3>
@@ -89,6 +81,15 @@
             <%}%>
         </table>
         </center>        
+        <%}
+            if (request.getParameter("btnSair") != null)
+            {
+                
+                session.invalidate();
+                response.sendRedirect("home.jsp");
+                
+            }
+        %>
         <h3><center>Top 10 melhores notas</center></h3>
          <center>
         <table class="table table-bordered"style="width: 50%;">
