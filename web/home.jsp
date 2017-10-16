@@ -62,6 +62,8 @@
         <h4><a href="questionario.jsp"><button type="button" class="btn btn-default">Realizar teste</button></a></h4>
         <h3>Testes realizados: <%= Quiz.contagem %></h3>
         <h3>Média: <%= Quiz.getMedia() %> </h3>
+        <%Usuario user = new Usuario();%>
+        <h3>nota usuario: <%= user.getNota() %> </h3>
         </center>
     <hr>
         <h3><center>Últimos 10 testes realizados</center></h3>

@@ -4,6 +4,7 @@
     Author     : ravan
 --%>
 
+<%@page import="br.com.fatecpg.quiz.Usuario"%>
 <%@page import="java.util.Random"%>
 <%@page import="br.com.fatecpg.quiz.Quiz"%>
 <%@page import="br.com.fatecpg.quiz.Perguntas"%>
@@ -30,6 +31,8 @@
                 if (request.getParameter("finalizar") != null)
                 {
                     int acertos = 0;
+                    int nota = 0;
+                    Usuario jogo = new Usuario();
                     for (Perguntas q: Quiz.getPerguntaLista())
                     {
                         String respostaUser = request.getParameter(q.getPergunta());
@@ -39,12 +42,19 @@
                             if (respostaUser.equals(q.getResposta()))
                             {
                                 acertos++;
+                                
+                                nota = nota + 10;
+                                
                             }
+                            
                         }
+                        
                     }
                     
-                    Quiz.contagem++;
-                    Quiz.soma += (100.00 * ((double)acertos/10.0));
+                    Quiz.contagem++;                    
+                    jogo.setNota(nota);
+                    Quiz.soma += (100.00 * ((double)acertos/10));                    
+                    Usuario.getNotaUser().add(jogo);
                     response.sendRedirect(request.getContextPath()+"/home.jsp");
                     
                 }

@@ -13,13 +13,13 @@ import java.util.ArrayList;
  */
 public class Usuario {
     private String nome;
-    private double nota;
+    private int nota;
 
-    public double getNota() {
+    public int getNota() {
         return nota;
     }
 
-    public void setNota(double nota) {
+    public void setNota(int nota) {
         this.nota = nota;
     }
     
