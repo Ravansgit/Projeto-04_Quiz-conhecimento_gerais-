@@ -27,7 +27,7 @@ public class Quiz {
             );
 
             Perguntas q2 = new Perguntas(
-                    "Quais são o menor e maior pais do mundo?", "Vaticano e Rússia",
+                    "Quais são, respectivamente, o menor e o maior pais do mundo?", "Vaticano e Rússia",
                     new String[]{
                         "Vaticano e Rússia",
                         "Nauru e China",
@@ -36,7 +36,7 @@ public class Quiz {
             );
 
             Perguntas q3 = new Perguntas(
-                    "Qual o livro mais vendido no mundo a seguir á Biblia?", "Dom Quixote",
+                    "Qual o livro mais vendido no mundo (ignorando a Biblia)?", "Dom Quixote",
                     new String[]{
                         "Dom Quixote",
                         "O senhor dos Aneis",
@@ -99,7 +99,7 @@ public class Quiz {
             );
 
             Perguntas q10 = new Perguntas(
-                    "Qual a altura da rede de volei nos jogos masculino e feminino? ", "2,4m a 2,24m",
+                    "Qual a altura, respectivamente, da rede de volei nos jogos masculino e feminino? ", "2,4m a 2,24m",
                     new String[]{
                         "2,4m a 2,24m",
                         "2,4 para ambos",
@@ -107,7 +107,7 @@ public class Quiz {
                     }
             );
             Perguntas q11= new Perguntas(
-                    "Em que periodo da pré-historia o fogo foi descorberto? ", "Paleolitico",
+                    "Em que periodo da pré-historia o fogo foi descoberto? ", "Paleolitico",
                     new String[]{
                         "Paleolitico",
                         "Neolitico",
@@ -115,7 +115,7 @@ public class Quiz {
                     }
             );
             Perguntas q12 = new Perguntas(
-                    "Qual a montanha masi alta do Brasil? ", "Pico da Neblina",
+                    "Qual a montanha mais alta do Brasil? ", "Pico da Neblina",
                     new String[]{
                         "Pico da Neblina",
                         "Pico Paraná",
@@ -123,7 +123,7 @@ public class Quiz {
                     }
             );
             Perguntas q13 = new Perguntas(
-                    "Em qual local da Ásia o português e lingua oficial? ", "Macau",
+                    "Em qual páis da Ásia o português é uma das linguas oficiais? ", "Macau",
                     new String[]{
                         "Macau",
                         "India",
@@ -134,12 +134,12 @@ public class Quiz {
                     "Qual destes países é transcontinental? ", "Rússia",
                     new String[]{
                         "Rússia",
-                        "Istamblur",
+                        "Istanbul",
                         "Tanzânia"
                     }
             );
             Perguntas q15 = new Perguntas(
-                    "Nome que se dá a uma porção de terra cercada de água por todos os lados? ", "Ilha",
+                    "Qual o nome que se dá a uma porção de terra cercada de água por todos os lados? ", "Ilha",
                     new String[]{
                         "Lagoa",
                         "Ilha",
@@ -147,7 +147,7 @@ public class Quiz {
                     }
             );
             Perguntas q16 = new Perguntas(
-                    "Cidade Brasileira onde esta o rio Tietê? ", "São Paulo",
+                    "Qual a cidade brasileira onde se situa o rio Tietê? ", "São Paulo",
                     new String[]{
                         "São Paulo",
                         "Rio de Janeiro",

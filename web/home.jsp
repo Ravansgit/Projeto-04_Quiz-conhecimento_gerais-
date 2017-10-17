@@ -77,7 +77,7 @@
              <%for (int i=1; i<=10; i++){%>
             <tr>
                 <td><%=i%></td>
-                 <td>aaaaaaa</td>
+                 <td><%=nome.getUsuario %></td>
                  <td>aaaaaaaa</td>
             </tr>
             <%}%>
