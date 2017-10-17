@@ -47,7 +47,7 @@
                       <a class="navbar-brand" href="#">Projeto 004</a>
                   </div>
               <ul class="nav navbar-nav">
-                  <li class="active"><a href="login.jsp">Olá, <%= nome %></a></li>
+                  <li class="active"><a href="">Olá, <%= nome %></a></li>
               </ul>
               <form>
                     <input class="btn btn-danger navbar-btn" style="margin-left: 10px;" type="submit" name="btnSair" value="Sair"/>  
@@ -77,7 +77,7 @@
              <%for (int i=1; i<=10; i++){%>
             <tr>
                 <td><%=i%></td>
-                 <td>gg boyz %></td>
+                 <td>aaaaaaaa></td>
                  <td>aaaaaaaa</td>
             </tr>
             <%}%>
