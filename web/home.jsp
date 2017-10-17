@@ -74,11 +74,14 @@
                 <th>Nome</th>
                 <th>Nota</th>
             </tr>
-             <%for (int i=1; i<=10; i++){%>
+             <%for (int j = 1; j <= Quiz.contagem; j++){%>
+             <%if (Quiz.contagem <= 10)%>
             <tr>
-                <td><%=i%></td>
-                 <td>aaaaaaaa></td>
-                 <td>aaaaaaaa</td>
+                <td><%=j%></td>
+                
+                 <td>Teste número <%= j %></td>
+                 
+                 <td><%= user.getNota() %></td>
             </tr>
             <%}%>
         </table>

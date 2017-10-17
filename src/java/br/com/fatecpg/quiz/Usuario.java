@@ -23,6 +23,7 @@ public class Usuario {
         this.nota = nota;
     }
     
+    
     private static ArrayList<Usuario> user;
     
     public static ArrayList<Usuario> getUsuario()

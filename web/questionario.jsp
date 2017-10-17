@@ -31,7 +31,6 @@
                 if (request.getParameter("finalizar") != null)
                 {
                     int acertos = 0;
-                    int nota = 0;
                     Usuario jogo = new Usuario();
                     for (Perguntas q: Quiz.getPerguntaLista())
                     {
@@ -43,7 +42,6 @@
                             {
                                 acertos++;
                                 
-                                nota = nota + 10;
                                 
                             }
                             
@@ -51,8 +49,8 @@
                         
                     }
                     
-                    Quiz.contagem++;                    
-                    jogo.setNota(nota);
+                    Quiz.contagem++;
+                    jogo.setNota(acertos);
                     Quiz.soma += (100.00 * ((double)acertos/10));                    
                     Usuario.getNotaUser().add(jogo);
                     response.sendRedirect(request.getContextPath()+"/home.jsp");
